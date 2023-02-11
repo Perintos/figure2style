@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import {TabMenuModule} from 'primeng/tabmenu';
+
 import { CardModule } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { CoursComponent } from './component/cours/cours.component';
@@ -25,6 +27,7 @@ import { MockService } from './service/mock.service';
     BrowserModule,
     AppRoutingModule,
     CardModule,
+    TabMenuModule,
     ButtonModule,
     NgbModule,
     HttpClientModule,

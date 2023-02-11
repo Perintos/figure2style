@@ -2,3 +2,21 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+.Body{
+    border : solid 2px rgb(151, 30, 151);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+div#page {
+    margin: 0 auto;
+    min-height: 100%;
+}
