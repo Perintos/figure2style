@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CoursComponent } from './cours/cours.component';
-import { MenuComponent } from './menu/menu.component';
-import { QuizzComponent } from './quizz/quizz.component';
+import { CoursComponent } from './component/cours/cours.component';
+import { MenuComponent } from './component/menu/menu.component';
+import { QuizzComponent } from './component/quizz/quizz.component';
 
 const routes: Routes = [
   { path:"menu", component: MenuComponent },
