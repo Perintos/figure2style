@@ -8,12 +8,14 @@ import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import { CoursComponent } from './cours/cours.component';
 import { QuizzComponent } from './quizz/quizz.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursComponent,
-    QuizzComponent
+    QuizzComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
