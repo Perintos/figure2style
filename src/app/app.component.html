@@ -1,1 +1,15 @@
-<router-outlet></router-outlet>
+
+<div>
+    <div class='router'>
+        <router-outlet></router-outlet>
+    </div>
+    <nav class='nav'>
+        <p-tabMenu class="tabmenu"[model]="items" [activeItem]="activeItem"> </p-tabMenu>
+    </nav>
+
+    <!-- <p-tabView>
+        <p-tabPanel [header]="item.label" *ngFor="let item of items; let i = index" [selected]="i == 0">
+            {{item.content}}
+        </p-tabPanel>
+    </p-tabView> -->
+</div>
