@@ -6,6 +6,16 @@
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
 
+@font-face {
+    font-family: 'Gilroy bold';
+    src: url('/assets/font/Gilroy-Bold.ttf'); 
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('/assets/font/Gilroy-Regular.ttf'); 
+  }
+
 .Body{
     border : solid 2px rgb(151, 30, 151);
 }
@@ -19,4 +29,14 @@ html, body {
 div#page {
     margin: 0 auto;
     min-height: 100%;
+}
+
+H1{
+    font-size: 1.5em;
+    color:rgb(22, 24, 24);
+    font-family: "Gilroy bold";
+}
+
+li{
+    font-family: "Gilroy";
 }
