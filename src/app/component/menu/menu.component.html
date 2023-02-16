@@ -1,13 +1,24 @@
-<div class="ui-g">
-    <p-card class="Cardapp"> 
-        <h1> Cours </h1>
-        <img src="../assets/book.png" alt="Book-illu">
-        <p>Description : Des supers cours, super chouette woauah</p>
-        <button class="ui-g-6" pButton type="button" label="Cours" (click)="clickCourse()"></button> 
+<div class="ui-g margin-main">
+    <h1> Cours </h1>
+        <p-card (click)="clickCourse()" class="Cardapp p-card-yellow"> 
+
+                <h2> Figures de styles </h2>
+                <p>Des fiches complétes !</p>
+                <img src="../assets/book.png" alt="Book-illu">
+
+        </p-card>
+
+    
+    
+    <h1> Exercices </h1>
+    <p-card (click)="clickQuizz()" class="Cardapp p-card-green"> 
+        <h2> Quizz de niveau 1</h2>
+        <img src="../assets/quizz1.png" alt="Illu-quizz1">
     </p-card>
-    <p-card class="Cardapp"> 
-        <h1> Quizz </h1>
-        <p>Description : Quizz ! Des quizz avec deux niveaux de difficulté</p>
-        <button class="ui-g-6" pButton type="button" label="Quizz" (click)="clickQuizz()"></button>
+    <p-card (click)="clickQuizz()" class="Cardapp p-card-blue"> 
+        <h2> Quizz de niveau 2</h2>
+        <img src="../assets/quizz2.png" alt="Illu-quizz2">
     </p-card>
+
+    
 </div>

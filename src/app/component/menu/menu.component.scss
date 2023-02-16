@@ -1,6 +1,54 @@
+$yellow:#BA8445;
+
 :host ::ng-deep {
-    .p-card {
-        margin:10px 10px 10px 10px;
-        background-color: #EFEFEF;
+    .p-card-yellow{ 
+        .p-card {
+            background-color: #F8F1E5;
+        }
+
+        H2 {
+            color: $yellow;
+        }
     }
-}
+ }
+
+ :host ::ng-deep {
+    .p-card-blue{ 
+        .p-card {
+            background-color: #E8F5FB;
+        }
+
+        H2 {
+            color: #366D63;
+        }
+    }
+ }
+
+ :host ::ng-deep {
+    .p-card-green{ 
+        .p-card {
+            background-color: #E9F2F1;
+        }
+        H2 {
+            color: #37646F;
+        }
+    }
+ }
+
+ :host ::ng-deep {
+    .p-card {
+        margin:40px 0px 40px 0px;
+        padding: 0rem 0rem 0rem 0rem;
+        img {
+            max-width: 150px;
+            text-align: right;
+        } 
+    }
+    .p-card:hover{
+    background-color: rgba(0, 0, 0, 0.082); // A FAIRE PLUS TARDS
+    }
+    .p-card-content{
+        padding : 0rem;
+    }
+ }
+
