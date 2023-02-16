@@ -14,14 +14,15 @@ import { MenuComponent } from './component/menu/menu.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { MockService } from './service/mock.service';
+import { SheetComponent } from './component/sheet/sheet.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursComponent,
     QuizzComponent,
-    MenuComponent
+    MenuComponent,
+    SheetComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +32,6 @@ import { MockService } from './service/mock.service';
     ButtonModule,
     NgbModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(MockService)
   ],
   providers: [],
   bootstrap: [AppComponent]
