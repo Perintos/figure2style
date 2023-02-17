@@ -15,6 +15,6 @@ export class StylisticDeviceService {
   }
 
   getById(id: any) {
-    return this.http.get<StylisticDevice>("api/stylisticDevice?id="+id);
+    return this.http.get<StylisticDevice>("http://localhost:8080/stylisticdevice/"+id);
   }
 }
