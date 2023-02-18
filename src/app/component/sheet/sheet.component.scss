@@ -1,0 +1,39 @@
+.texte-cours{
+    font-size: 0.9em;
+    color:#3D6B76;
+    font-family: "Gilroy-Bold";
+}
+
+.sousligneh1{
+    width: 150px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #3D6B76;
+    margin-bottom: 20px;
+}
+
+.sousligneexemple{
+    width: 50px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #3D6B76;
+}
+
+.exemple{
+    background-color: rgb(255, 232, 232);
+    border-radius: 14px;
+    padding:10px;
+
+    p{
+        margin-bottom: 5px;
+        margin-top: 5px;
+        font-size: 0.8em;
+    }
+}
+
+.imgsheet{
+    position:absolute;
+    top:-50px;
+    right:-50px;
+    max-width: 200px;
+}
