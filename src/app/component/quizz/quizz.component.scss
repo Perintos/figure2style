@@ -1,3 +1,70 @@
 .selected{
     background-color: rgb(164, 164, 226);
 }
+
+p{
+    font-family: "Gilroy bold";
+
+}
+
+.list-item{
+    background-color: white;
+    width: 80%;
+    border-radius: 45px;
+    margin: 1em auto 1em;
+    margin-right: 75px;
+    list-style: none;
+
+    margin-left: 30px;
+    font-family: "Gilroy bold";
+    font-size: 15px;
+
+    .item{
+        margin-left: 15px;
+    }
+    
+}
+.list-item:hover{
+    border: 3px solid #6E7D92;
+}
+
+:host ::ng-deep {
+    .button-panel{
+        .button-valider{
+            .p-element button .p-button .p-component {
+                height: 10px!important;
+                background-color: green;
+            }
+        }
+    } 
+}
+
+::ng-deep {
+    .p-selectbutton .p-button.p-highlight {
+        background: red;
+        background-color: red;
+    }
+
+    .p-selectbutton .p-button.p-highlight:hover {
+        background: green;
+    }
+
+}
+
+.button-panel{
+    display: flex; 
+    justify-content: right;
+    
+    .button{
+        background-color: #366D63;
+        color:white;
+        border:#366D63 1px solid;
+        border-radius: 5px;
+        width: 33%;
+        height: auto;
+        margin-right: 10px;
+    }
+    .button-disabled{
+        color:grey;
+    }
+}

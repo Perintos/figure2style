@@ -18,29 +18,21 @@
     }
 }
 
-.sousligneh1{
-    width: 150px;
-    height: 5px;
-    border-radius: 10px;
-    background-color: #3D6B76;
-    margin-bottom: 20px;
-}
+.list-item{
+    background-color: white;
+    border: 2px black solid;
+    width: 80%;
+    border-radius: 45px;
+    margin: 1em auto 1em;
+    margin-right: 75px;
+    list-style: none;
 
-    .list-item{
-        background-color: white;
-        border: 2px black solid;
-        width: 80%;
-        border-radius: 45px;
-        margin: 1em auto 1em;
-        margin-right: 75px;
-        list-style: none;
-    
-        li{
-            margin-left: 30px;
-            font-family: "Gilroy bold";
-            font-size: 15px;
-        }
+    li{
+        margin-left: 30px;
+        font-family: "Gilroy bold";
+        font-size: 15px;
     }
+}
 
 ul li::before {
     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */

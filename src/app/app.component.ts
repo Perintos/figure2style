@@ -15,7 +15,7 @@ export class AppComponent {
 
   ngOnInit(){
     this.activeItem = this.items[0];
-    this.router.navigate(["/","menu"])
+    this.router.navigate(["/","quizz"])
     this.items = [
       {label: 'Accueil', icon: 'pi pi-fw pi-home', routerLink:['/menu']},
       {label: 'Cours', icon: 'pi pi-fw pi-list', routerLink:['/cours']},
