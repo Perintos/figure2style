@@ -16,16 +16,25 @@
     }
 }
 
-.nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+.container{
+    display: flex;
+    width:100%;
 
-    .tabmenu {
-        width: 100%;
-        .p-tabmenu {
-            color:red !important
-        }
+    .router{
+        height: 100%;
+        border: 2px solid green;
+    }
+    
+    .nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 30%;
+        .tabmenu {
+            width: 100%;
+            .p-tabmenu {
+                color:red !important
+            }
+        }   
     }
 }

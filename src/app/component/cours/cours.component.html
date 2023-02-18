@@ -1,5 +1,21 @@
-<h1>Les fiches de cours</h1>
+<div class="background-whiteblue height">
+    <div class="padding-main">
+        <div class="header">
+            <div class="title">
+                <h1>Figures de style</h1>
+                <div class="sousligneh1"></div>
+            </div>
+            <div class="image">
+                <img src="../assets/cat-book.png" alt="">
+            </div>
+        </div>
 
-<ul>
-    <li *ngFor="let stylisticDevice of listStylisticDevices" (click)="clickOpenCourse(stylisticDevice.id)">{{stylisticDevice.name}}</li>
-</ul>
+        <ul class="list">
+            <div class="list-item" *ngFor="let stylisticDevice of listStylisticDevices">
+                <li (click)="clickOpenCourse(stylisticDevice.id)">
+                    <span class="text">{{stylisticDevice.name}}</span>
+                </li>
+            </div>
+        </ul>
+    </div>
+</div>
