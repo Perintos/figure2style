@@ -1,1 +1,28 @@
-<p>quizz works!</p>
+<h1>Quizz :</h1>
+
+<h2>question :{{n+1}} / 10</h2>
+
+<div *ngIf="!isLoading">
+    <p>{{examples[n].text}}</p>
+
+    <table>
+        <tbody>
+            <tr>
+                <td [ngClass]="indexAnswerChosen==0?'selected':null" (click) = onClickAnswer(0)>{{listAnswer[0].name}}</td>
+                <td [ngClass]="indexAnswerChosen==1?'selected':null" (click) = onClickAnswer(1)>{{listAnswer[1].name}}</td>
+            </tr>
+            <tr>
+                <td [ngClass]="indexAnswerChosen==2?'selected':null" (click) = onClickAnswer(2)>{{listAnswer[2].name}}</td>
+                <td [ngClass]="indexAnswerChosen==3?'selected':null" (click) = onClickAnswer(3)>{{listAnswer[3].name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p *ngIf="isVictoryPanelDisplayed">{{isWon?"Gagné":"Perdu"}}</p>
+
+<button pButton type="button" label="Cours"></button>
+<button pButton type="button" [disabled]="answerClicked.id==0" class="p-button-success" (click)="onClickNextValidate()">{{isQuestionOver?"Suivant":"Valider"}}</button>
+
+
+<p>{{trueAnswer!=undefined?trueAnswer.name:null}}</p>

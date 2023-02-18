@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { SheetComponent } from './component/sheet/sheet.component';
+import { QuizzResultComponent } from './component/quizz-result/quizz-result.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SheetComponent } from './component/sheet/sheet.component';
     CoursComponent,
     QuizzComponent,
     MenuComponent,
-    SheetComponent
+    SheetComponent,
+    QuizzResultComponent
   ],
   imports: [
     BrowserModule,

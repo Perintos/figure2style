@@ -7,14 +7,17 @@ import { StylisticDevice } from '../model/stylisticdevice.model';
   providedIn: 'root'
 })
 export class StylisticDeviceService {
-
   constructor(private http:HttpClient) { }
 
   getAllStylisticDevice(): Observable<any[]> {
     return this.http.get<any[]>("http://localhost:8080/stylisticdevice");
   }
 
-  getById(id: any) {
-    return this.http.get<StylisticDevice>("http://localhost:8080/stylisticdevice/"+id);
+  getById(id: any): Observable<any> {
+    return this.http.get<any>("http://localhost:8080/stylisticdevice/"+id);
+  }
+
+  getRandom(stylisticDevice: StylisticDevice): Observable<any> {
+    return this.http.get<any>("http://localhost:8080/stylisticdevice/random/"+stylisticDevice.id);
   }
 }
