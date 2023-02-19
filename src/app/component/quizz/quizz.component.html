@@ -1,4 +1,4 @@
-<div class="background-whitegreen height">
+<div *ngIf="!isShowingCourse" class="background-whitegreen height">
     <div class="padding-main" *ngIf="!isLoading">
         <h1>Quizz niveau 1 :</h1>
         <div class="sub-line-title"></div>
@@ -19,9 +19,16 @@
         </div>
 
         <div class="button-panel">
+            <button class="button-blue" *ngIf="isQuestionOver && !isWon" (click)="onClickCourse()">Cours</button>
             <!-- <button class="button">Cours</button> -->
             <button *ngIf="answerClicked.id!=0" class="button-green" [disabled]="answerClicked.id==0" (click)="onClickNextValidate()">{{isQuestionOver?"Suivant":"Valider"}}</button>
             <button *ngIf="answerClicked.id==0" class="button-green button-disabled" [disabled]="answerClicked.id==0" (click)="onClickNextValidate()">{{isQuestionOver?"Suivant":"Valider"}}</button>
         </div>
     </div>
 </div>
+
+<app-sheet *ngIf="isShowingCourse" 
+             [id]="trueAnswer.id" 
+             [isParentExist]=true 
+             (onReturnClickedEvent)="onClickReturn()">
+</app-sheet>

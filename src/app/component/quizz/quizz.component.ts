@@ -25,6 +25,7 @@ export class QuizzComponent {
   protected answerClicked:StylisticDevice;
 
   protected isLoading:boolean = true;
+  protected isShowingCourse: boolean = false;
 
   constructor(private exampleService:ExampleService,
               private stylisticDeviceService:StylisticDeviceService,
@@ -103,6 +104,14 @@ export class QuizzComponent {
         });
       })
     }
+  }
+
+  onClickCourse(){
+    this.isShowingCourse=true;
+  }
+
+  onClickReturn(){
+    this.isShowingCourse=false;
   }
 
   getClass(index:number){

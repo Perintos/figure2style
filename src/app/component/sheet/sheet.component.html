@@ -1,7 +1,7 @@
-<div class="background-whiteblue"> 
+<div class="background-whiteblue" *ngIf="!isLoading"> 
     <img class="imgsheet" src="../assets/fiche_cours.png" alt="fiche_cours">
     <div class="padding-main">
-        <p> {{"<"}} Retour </p>
+        <p class="texte-cours" (click)="onReturnClicked()"> {{"<"}} Retour </p>
         <h1>{{stylisticDevice.name}}</h1>
         <div class="sub-line-title"></div>
         <p class="texte-cours">{{stylisticDevice.description}}</p>
