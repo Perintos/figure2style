@@ -17,7 +17,7 @@ p{
 
     margin-left: 30px;
     font-family: "Gilroy bold";
-    color:#3a3a3a;
+    color:var(--whiteblack);
     font-size: 15px;
     border: 3px solid #ffffff;
 
@@ -58,9 +58,9 @@ p{
     justify-content: right;
     
     .button{
-        background-color: #366D63;
+        background-color: var(--green);
         color:white;
-        border:#366D63 1px solid;
+        border:var(--green) 1px solid;
         border-radius: 5px;
         width: 33%;
         height: auto;
@@ -72,6 +72,6 @@ p{
 }
 
 h3{
-    color :#3a3a3a;
+    color :var(--whiteblack);
     font-size: 1em;
 }
