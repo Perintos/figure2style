@@ -36,7 +36,7 @@ Configurer la variable d'environnement :
 ## Installer andoid studio
 Installer android studio via ce lien.
 ```https://developer.android.com/studio```
-Dans le sdk manager choisir le sdk v32:
+Dans le sdk manager choisir le Android SDK Build-Tools 30.0.3 :
 ```android studio > apk manager > sdk tools > SDK android Build Tools```
 
 Initialiser deux varibales d'environnements comme dans l'exemple suivant : 

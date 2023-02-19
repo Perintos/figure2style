@@ -1,6 +1,8 @@
 {
   "name": "figures2style",
+  "displayName": "figures2style",
   "version": "0.0.0",
+  "main": "index.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,6 +10,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.0.0",
@@ -35,6 +40,7 @@
     "@angular/compiler-cli": "^15.0.0",
     "@angular/localize": "^15.0.0",
     "@types/jasmine": "~4.3.0",
+    "cordova-android": "^10.1.2",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
@@ -42,5 +48,11 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.8.2"
+  },
+  "cordova": {
+    "plugins": {},
+    "platforms": [
+      "android"
+    ]
   }
 }
