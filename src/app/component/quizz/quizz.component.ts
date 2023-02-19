@@ -83,25 +83,43 @@ export class QuizzComponent {
 
   onClickNext(){
     this.isLoading = true;
-
+    this.answerClicked.id=0;
     this.isVictoryPanelDisplayed=false
     this.indexAnswerChosen=-1
     this.n = this.n+1;
     this.isQuestionOver=false;
     this.listAnswer = []
     
-    if(this.n>3)
+    if(this.n>9)
       this.router.navigate(["quizz-result",this.rating]);
+    else{
+      this.stylisticDeviceService.getById(this.examples[this.n].id_stylistic_device).subscribe(stylisticDevice => { //requete http pour obtenir la répoonse à la question
+        this.listAnswer.push(stylisticDevice);
+        this.trueAnswer=stylisticDevice;
+        this.stylisticDeviceService.getRandom(stylisticDevice).subscribe(stylisticDevices => {                      //requete http pour obtenir 3 fausse réponse à la question
+          this.listAnswer.push(...stylisticDevices);
+          this.listAnswer = arrayShuffle(this.listAnswer);
+          this.isLoading = false;
+        });
+      })
+    }
+  }
 
-    this.stylisticDeviceService.getById(this.examples[this.n].id_stylistic_device).subscribe(stylisticDevice => { //requete http pour obtenir la répoonse à la question
-      this.listAnswer.push(stylisticDevice);
-      this.trueAnswer=stylisticDevice;
-      this.stylisticDeviceService.getRandom(stylisticDevice).subscribe(stylisticDevices => {                      //requete http pour obtenir 3 fausse réponse à la question
-        this.listAnswer.push(...stylisticDevices);
-        this.listAnswer = arrayShuffle(this.listAnswer);
-        this.isLoading = false;
-      });
-    })
+  getClass(index:number){
+    if(!this.isQuestionOver){
+      console.log("selected")
+      return this.indexAnswerChosen==index?'selected':null;
+    }
+    else{
+      if(this.indexAnswerChosen==index && this.listAnswer[index].id==this.trueAnswer.id)
+        return "green";
+      else if(this.indexAnswerChosen==index && this.listAnswer[index].id!=this.trueAnswer.id)
+        return "red";
+      
+      if(this.indexAnswerChosen!=index && this.listAnswer[index].id==this.trueAnswer.id)
+        return "green";
+    }
+    return null;
   }
 }
 

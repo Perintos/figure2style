@@ -1,6 +1,17 @@
 .selected{
-    background-color: rgb(164, 164, 226);
+    border: 3px solid #6E7D92!important;
 }
+
+.green{
+    background-color: #CCEFCB!important;
+    border: 3px solid #366D63!important;
+}
+
+.red{
+    background-color: #F8E5E5!important;
+    border: 3px solid #D00C0C!important;
+}
+
 
 p{
     font-family: "Gilroy bold";
@@ -25,9 +36,6 @@ p{
         margin-left: 15px;
     }
     
-}
-.list-item:hover{
-    border: 3px solid #6E7D92;
 }
 
 :host ::ng-deep {
@@ -56,19 +64,6 @@ p{
 .button-panel{
     display: flex; 
     justify-content: right;
-    
-    .button{
-        background-color: var(--green);
-        color:white;
-        border:var(--green) 1px solid;
-        border-radius: 5px;
-        width: 33%;
-        height: auto;
-        margin-right: 10px;
-    }
-    .button-disabled{
-        color:grey;
-    }
 }
 
 h3{

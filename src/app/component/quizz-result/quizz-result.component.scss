@@ -1,0 +1,58 @@
+.rating{
+    font-family: "Gilroy bold";
+    color: #BA8445;
+    text-align: center;
+    font-size:2rem
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.rating-card{
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+:host ::ng-deep {
+    .rating-card {
+
+        .element{
+            padding: 10px;
+        }
+        .p-card-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+.header{
+    display: flex;
+    width:100%;
+    .title{
+        width: 70%;
+    }
+    .image{
+        width: 30%;
+    }
+}
+
+.margin{
+    padding: 20px;
+}
+
+
+button{
+    width: 100%;
+    margin:0px 0px 0px 0px
+}

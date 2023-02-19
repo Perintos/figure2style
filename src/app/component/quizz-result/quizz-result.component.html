@@ -1,2 +1,18 @@
-<h2>Resultats</h2>
-<h3>Note : {{rating}}/10</h3>
+<div class="background-whitegreen height">
+    <div class="padding-main">
+        <h1 style="justify-content: left!important;">Quizz niveau 1 :</h1>
+        <div class="sub-line-title"></div>
+
+        <div class="container">
+
+                <p-card class="rating-card"> 
+                    <img class="element trophee" *ngIf="rating>=5" src="../assets/badge.png" alt="trophee">
+                    <img class="element trophee" *ngIf="rating<5" src="../assets/student.png" alt="student-failure">
+                    <span class="rating element">{{rating}}/10</span>
+                </p-card>
+                <div class="margin">
+                    <button class="button-green" (click)="onClickExit()">Quitter</button>
+                </div>
+        </div>
+    </div>
+</div>

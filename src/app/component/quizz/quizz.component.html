@@ -12,20 +12,16 @@
         </div>
         
         <div class="list">
-            <div class="list-item" [ngClass]="indexAnswerChosen==0?'selected':null" (click) = onClickAnswer(0)><span class="item">{{listAnswer[0].name}}</span></div>
-            <div class="list-item" [ngClass]="indexAnswerChosen==1?'selected':null" (click) = onClickAnswer(1)><span class="item">{{listAnswer[1].name}}</span></div>
-            <div class="list-item" [ngClass]="indexAnswerChosen==2?'selected':null" (click) = onClickAnswer(2)><span class="item">{{listAnswer[2].name}}</span></div>
-            <div class="list-item" [ngClass]="indexAnswerChosen==3?'selected':null" (click) = onClickAnswer(3)><span class="item">{{listAnswer[3].name}}</span></div>
+            <div class="list-item" [ngClass]="getClass(0)" (click) = onClickAnswer(0)><span class="item">{{listAnswer[0].name}}</span></div>
+            <div class="list-item" [ngClass]="getClass(1)" (click) = onClickAnswer(1)><span class="item">{{listAnswer[1].name}}</span></div>
+            <div class="list-item" [ngClass]="getClass(2)" (click) = onClickAnswer(2)><span class="item">{{listAnswer[2].name}}</span></div>
+            <div class="list-item" [ngClass]="getClass(3)" (click) = onClickAnswer(3)><span class="item">{{listAnswer[3].name}}</span></div>
         </div>
-
-        <p *ngIf="isVictoryPanelDisplayed">{{isWon?"Gagné":"Perdu"}}</p>
 
         <div class="button-panel">
             <!-- <button class="button">Cours</button> -->
-            <button *ngIf="answerClicked.id!=0" class="button" [disabled]="answerClicked.id==0" (click)="onClickNextValidate()">{{isQuestionOver?"Suivant":"Valider"}}</button>
-            <button *ngIf="answerClicked.id==0" class="button button-disabled" [disabled]="answerClicked.id==0" (click)="onClickNextValidate()">{{isQuestionOver?"Suivant":"Valider"}}</button>
+            <button *ngIf="answerClicked.id!=0" class="button-green" [disabled]="answerClicked.id==0" (click)="onClickNextValidate()">{{isQuestionOver?"Suivant":"Valider"}}</button>
+            <button *ngIf="answerClicked.id==0" class="button-green button-disabled" [disabled]="answerClicked.id==0" (click)="onClickNextValidate()">{{isQuestionOver?"Suivant":"Valider"}}</button>
         </div>
-
-        <!-- <p>{{trueAnswer!=undefined?trueAnswer.name:null}}</p> -->
     </div>
 </div>
