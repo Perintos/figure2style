@@ -7,20 +7,19 @@
     }
 }
 
-
-
-.nav {
-    position: fixed;
+.menu-container{
     bottom: 0;
-    justify-content: center;
+    position: fixed;
+    width: 100%;
+}
 
-        :host ::ng-deep {
-        .tabmenu {
-            .p-tabmenu-nav {
-                display: flex;
-                justify-content: space-around;
-                transition: all .2s ease-out;
-            }
+:host ::ng-deep {
+    .tabmenu{
+        width: 100%;
+        .p-tabmenu-nav {
+            display: flex;
+            justify-content: space-around;
+            transition: all .2s ease-out;
         }
     }
 }

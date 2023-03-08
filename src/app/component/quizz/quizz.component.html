@@ -1,24 +1,26 @@
 <div *ngIf="!isShowingCourse" class="background-whitegreen height">
     <div class="padding-main" *ngIf="!isLoading">
-        <h1>Quizz niveau 1 :</h1>
-        <div class="sub-line-title"></div>
+        <div class="margin">
+            <h1>Quizz niveau 1 :</h1>
+            <div class="sub-line-title"></div>
+        </div>
 
-        <h3> Trouve la  figure de style qui correspond à l’exemple : </h3>
+        <h3 class="margin"> Trouve la  figure de style qui correspond à l’exemple : </h3>
 
-        <div class="exemple">
+        <div class="exemple margin">
             <h3>Question {{n+1}}/10</h3>
             <div class="sub-line-example"></div>
             <p>{{examples[n].text}}</p>
         </div>
         
-        <div class="list">
+        <div class="list margin">
             <div class="list-item" [ngClass]="getClass(0)" (click) = onClickAnswer(0)><span class="item">{{listAnswer[0].name}}</span></div>
             <div class="list-item" [ngClass]="getClass(1)" (click) = onClickAnswer(1)><span class="item">{{listAnswer[1].name}}</span></div>
             <div class="list-item" [ngClass]="getClass(2)" (click) = onClickAnswer(2)><span class="item">{{listAnswer[2].name}}</span></div>
             <div class="list-item" [ngClass]="getClass(3)" (click) = onClickAnswer(3)><span class="item">{{listAnswer[3].name}}</span></div>
         </div>
 
-        <div class="button-panel">
+        <div class="button-panel margin">
             <button class="button-blue" *ngIf="isQuestionOver && !isWon" (click)="onClickCourse()">Cours</button>
             <!-- <button class="button">Cours</button> -->
             <button *ngIf="answerClicked.id!=0" class="button-green" [disabled]="answerClicked.id==0" (click)="onClickNextValidate()">{{isQuestionOver?"Suivant":"Valider"}}</button>
