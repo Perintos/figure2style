@@ -1,42 +1,26 @@
-:host ::ng-deep {
-    .tabmenu {
-        .p-tabmenu-nav {
-            display: flex;
-            justify-content: space-around;
-            transition: all .2s ease-out;
-            &:hover {
-                // something on this component
-                color: red;
-                // something deeper
-                .potato {
-                    color: pink;
-                }
-            }
-        }
-    }
-}
 
-.container{
-    display: flex;
-    width:100%;
-    border: 2px solid green;
-
+.component-container{
+    height: 100%;
 
     .router{
         height: 100%;
-        border: 2px solid green;
     }
-    
-    .nav {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        height: 30%;
+}
+
+
+
+.nav {
+    position: fixed;
+    bottom: 0;
+    justify-content: center;
+
+        :host ::ng-deep {
         .tabmenu {
-            width: 100%;
-            .p-tabmenu {
-                color:red !important
+            .p-tabmenu-nav {
+                display: flex;
+                justify-content: space-around;
+                transition: all .2s ease-out;
             }
-        }   
+        }
     }
 }
