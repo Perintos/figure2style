@@ -7,17 +7,21 @@ import { StylisticDevice } from '../model/stylisticdevice.model';
   providedIn: 'root'
 })
 export class StylisticDeviceService {
+  private url:string ="http://51.254.119.169/"
+  private tls:string ="https://51.254.119.169/"
+  private local:string ="http://localhost:3000/"
+
   constructor(private http:HttpClient) { }
 
   getAllStylisticDevice(): Observable<any[]> {
-    return this.http.get<any[]>("http://localhost:8080/stylisticdevice");
+    return this.http.get<any[]>(this.tls + "stylisticdevice/");
   }
 
   getById(id: any): Observable<any> {
-    return this.http.get<any>("http://localhost:8080/stylisticdevice/"+id);
+    return this.http.get<any>(this.tls+"stylisticdevice/"+id);
   }
 
   getRandom(stylisticDevice: StylisticDevice): Observable<any> {
-    return this.http.get<any>("http://localhost:8080/stylisticdevice/random/"+stylisticDevice.id);
+    return this.http.get<any>(this.tls+"stylisticdevice/random/"+stylisticDevice.id);
   }
 }
