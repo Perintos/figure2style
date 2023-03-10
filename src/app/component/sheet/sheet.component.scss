@@ -8,9 +8,13 @@
 p{
     font-family: "Gilroy";
 }
+
 .imgsheet{
-    position:absolute;
-    top:-50px;
-    right:-50px;
+    float: right;
+    width: 130px;
     max-width: 200px;
+}
+
+.height{
+    height:100%;
 }
