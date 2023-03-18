@@ -53,3 +53,11 @@ ajouter le pathing dans la variable d'environnement path :
 ### Préparer l'appeil physique
 paramêtres > A propos du téléphone > Informations logiciel > Numéro de version (apopuyer 7 fois)
 paramêtres > Options de développement > activer déboggage USB
+
+
+### Générer une applis viable pour le play store
+Utiliser cette commande pour générer une clès de signature de l'applis
+```keytool -genkey -alias mykey -keyalg RSA -keystore mykey.jks -keysize 3000 -validity 10000```
+Générer un apk viable pour le play store
+```cordova build android --release --buildconfig```
+TODO relever le niveau d'api android pour une éligibilité play store
