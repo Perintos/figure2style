@@ -95,10 +95,9 @@ export class QuizzComponent {
     else{
       this.stylisticDeviceService.getById(this.examples[this.n].id_stylistic_device).subscribe(stylisticDevice => { //requete http pour obtenir la répoonse à la question
         this.trueAnswer=stylisticDevice;
-        this.stylisticDeviceService.getRandom(stylisticDevice).subscribe(stylisticDevices => {                      //requete http pour obtenir 3 fausse réponse à la question
+        this.stylisticDeviceService.getRandom(this.examples[this.n].id_stylistic_device).subscribe(stylisticDevices => {                      //requete http pour obtenir 3 fausse réponse à la question
           this.listAnswer = stylisticDevices
-          let index = Math.floor(Math.random() * 4);
-          this.listAnswer.splice(index, 0, this.trueAnswer);
+          this.listAnswer.splice(Math.floor(Math.random() * 4), 0, this.trueAnswer);
           this.isLoading = false;
         });
       })

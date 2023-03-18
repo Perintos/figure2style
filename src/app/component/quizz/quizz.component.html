@@ -22,7 +22,6 @@
 
         <div class="button-panel margin">
             <button class="button-blue" *ngIf="isQuestionOver && !isWon" (click)="onClickCourse()">Cours</button>
-            <!-- <button class="button">Cours</button> -->
             <button *ngIf="answerClicked.id!=0" class="button-green" [disabled]="answerClicked.id==0" (click)="onClickNextValidate()">{{isQuestionOver?"Suivant":"Valider"}}</button>
             <button *ngIf="answerClicked.id==0" class="button-green button-disabled" [disabled]="answerClicked.id==0" (click)="onClickNextValidate()">{{isQuestionOver?"Suivant":"Valider"}}</button>
         </div>

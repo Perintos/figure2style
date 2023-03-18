@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Example } from '../model/example.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class ExampleService {
 
   constructor(private http:HttpClient) { }
 
-  getRandom(): Observable<any> {
-    return this.http.get<any>(this.tls+"example/random");
+  getRandom(): Observable<Example[]> {
+    return this.http.get<Example[]>(this.tls+"example/random");
   }
 }

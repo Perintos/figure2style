@@ -13,15 +13,15 @@ export class StylisticDeviceService {
 
   constructor(private http:HttpClient) { }
 
-  getAllStylisticDevice(): Observable<any[]> {
-    return this.http.get<any[]>(this.tls + "stylisticdevice/");
+  getAllStylisticDevice(): Observable<StylisticDevice[]> {
+    return this.http.get<StylisticDevice[]>(this.tls + "stylisticdevice/");
   }
 
-  getById(id: any): Observable<any> {
-    return this.http.get<any>(this.tls+"stylisticdevice/"+id);
+  getById(id: number): Observable<StylisticDevice> {
+    return this.http.get<StylisticDevice>(this.tls+"stylisticdevice/"+id);
   }
 
-  getRandom(stylisticDevice: StylisticDevice): Observable<any> {
-    return this.http.get<any>(this.tls+"stylisticdevice/random/"+stylisticDevice.id);
+  getRandom(stylistic_id: number): Observable<any> {
+    return this.http.get<StylisticDevice>(this.tls+"stylisticdevice/random/"+stylistic_id);
   }
 }
