@@ -89,17 +89,16 @@ export class QuizzComponent {
     this.indexAnswerChosen=-1
     this.n = this.n+1;
     this.isQuestionOver=false;
-    this.listAnswer = []
     
     if(this.n>9)
       this.router.navigate(["quizz-result",this.rating]);
     else{
       this.stylisticDeviceService.getById(this.examples[this.n].id_stylistic_device).subscribe(stylisticDevice => { //requete http pour obtenir la répoonse à la question
-        this.listAnswer.push(stylisticDevice);
         this.trueAnswer=stylisticDevice;
         this.stylisticDeviceService.getRandom(stylisticDevice).subscribe(stylisticDevices => {                      //requete http pour obtenir 3 fausse réponse à la question
-          this.listAnswer.push(...stylisticDevices);
-          this.listAnswer = arrayShuffle(this.listAnswer);
+          this.listAnswer = stylisticDevices
+          let index = Math.floor(Math.random() * 4);
+          this.listAnswer.splice(index, 0, this.trueAnswer);
           this.isLoading = false;
         });
       })
@@ -116,7 +115,6 @@ export class QuizzComponent {
 
   getClass(index:number){
     if(!this.isQuestionOver){
-      console.log("selected")
       return this.indexAnswerChosen==index?'selected':null;
     }
     else{
